@@ -43,7 +43,7 @@ class HighArray(size: Int) {
             a[i] = a[i + 1]
         }
 
-        a[nElems - 1] = 0
+        a[--nElems] = 0
 
     }
 
