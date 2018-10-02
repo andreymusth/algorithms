@@ -1,9 +1,9 @@
-import array.HighArray
+import array.OrdArray
 
 
 fun main(vararg args: String) {
 
-    val arr = HighArray(20)
+    val arr = OrdArray(20)
     arr.display()
     arr.insert(1)
     arr.insert(2)
@@ -13,11 +13,5 @@ fun main(vararg args: String) {
     arr.display()
 
     println()
-
-    arr.delete(44)
-    arr.display()
-    println()
-    arr.delete(2)
-    arr.display()
-
+    println("found element with index ${arr.find(34)}")
 }
