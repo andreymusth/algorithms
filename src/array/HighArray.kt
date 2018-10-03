@@ -47,4 +47,46 @@ class HighArray(size: Int) {
 
     }
 
+    fun getMax(): Long {
+
+        var max = -1L
+
+        if (nElems == 0) {
+            return max
+        }
+
+        for (i in 0 until nElems) {
+            if (a[i] > max) {
+                max = a[i]
+            }
+        }
+
+        return max
+    }
+
+    fun removeMax(): Long {
+
+        var max = -1L
+        var maxInd = -1
+
+        if (nElems == 0) {
+            return max
+        }
+
+        for (i in 0 until nElems) {
+            if (a[i] > max) {
+                max = a[i]
+                maxInd = i
+            }
+        }
+
+        for (i in maxInd until nElems) {
+            a[i] = a[i + 1]
+        }
+
+        a[nElems] = 0
+
+        return max
+    }
+
 }
