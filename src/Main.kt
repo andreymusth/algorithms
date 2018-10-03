@@ -19,11 +19,14 @@ fun main(vararg args: String) {
     arr.display()
 
     println()
+    println()
+    val sorted = LongArray(19)
 
-    println(arr.removeMax())
-    println()
-    arr.display()
-    println()
-    println(arr.removeMax())
-    arr.display()
+    for (i in 0 until 19) {
+        sorted[i] = arr.removeMax()
+    }
+
+    for (i in 0 until 19) {
+        print("${sorted[i]} ")
+    }
 }
