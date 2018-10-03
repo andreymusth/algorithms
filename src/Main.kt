@@ -13,5 +13,18 @@ fun main(vararg args: String) {
     arr.display()
 
     println()
-    println("found element with index ${arr.find(34)}")
+
+    arr.delete(23)
+
+    println()
+
+    arr.display()
+
+    arr.delete(1)
+
+    println()
+
+    println()
+
+    arr.display()
 }

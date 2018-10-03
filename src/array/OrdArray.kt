@@ -24,8 +24,20 @@ class OrdArray(size: Int) {
         ++nElems
     }
 
-    fun delete(key: Long) {
+    fun delete(key: Long): Boolean {
+        val indexToDelete = find(key)
+        if (indexToDelete == -1) {
+            return false
+        }
 
+        for (i in indexToDelete until nElems) {
+            a[i] = a[i + 1]
+        }
+
+        a[nElems] = 0
+        --nElems
+
+        return true
     }
 
     fun find(key: Long): Int {
