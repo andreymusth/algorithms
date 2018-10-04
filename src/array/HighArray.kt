@@ -89,4 +89,32 @@ class HighArray(size: Int) {
         return max
     }
 
+    fun noDups() {
+
+        for (i in 0 until nElems) {
+
+            val current = a[i]
+            if (current == -1L) {
+                continue
+            }
+
+            for (j in i + 1 until nElems) {
+
+                if (a[j] == current && a[j] != -1L) {
+                    a[j] = -1
+                }
+            }
+        }
+
+        for (i in 0 until nElems) {
+            if (a[i] == -1L) {
+                for (j in i until nElems - 1) {
+                    a[j] = a[j + 1]
+                }
+                --nElems
+            }
+        }
+
+    }
+
 }
