@@ -65,9 +65,46 @@ class OrdArray(size: Int) {
         }
     }
 
+    fun get(i: Int) = a[i]
+
     fun display() {
         for (i in 0 until nElems) {
             print("${a[i]} ")
+        }
+    }
+
+
+    companion object {
+        fun merge(arr1: OrdArray, arr2: OrdArray) {
+
+            val result = LongArray(arr1.nElems + arr2.nElems)
+
+            var i = 0
+            var j = 0
+            var k = 0
+
+
+            while (i < arr1.nElems && j < arr2.nElems) {
+                if (arr1.get(i) < arr2.get(j)) {
+                    result[k++] = arr1.get(i++)
+                } else {
+                    result[k++] = arr2.get(j++)
+                }
+            }
+
+            for (l in i until arr1.nElems) {
+                result[k++] = arr1.get(l)
+            }
+
+            for (l in j until arr2.nElems) {
+                result[k++] = arr1.get(l)
+            }
+
+
+            for (i1 in 0 until result.size) {
+                print("${result[i1]} ")
+            }
+
         }
     }
 }
