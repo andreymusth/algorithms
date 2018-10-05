@@ -89,6 +89,37 @@ class HighArray(size: Int) {
         return max
     }
 
+    fun bubbleSort() {
+        for (i in 0 until nElems) {
+            for (j in 0 until nElems - 1) {
+                if (a[j] > a[j + 1]) {
+                    val k = a[j + 1]
+                    a[j + 1] = a[j]
+                    a[j] = k
+                }
+            }
+        }
+    }
+
+    fun selectionSort() {
+
+        for (i in 0 until nElems) {
+
+            var min = i
+
+            for (j in i until nElems) {
+                if (a[j] < a[min]) {
+                    min = j
+                }
+            }
+
+            val k = a[i]
+            a[i] = a[min]
+            a[min] = k
+
+        }
+    }
+
     fun noDups() {
 
         for (i in 0 until nElems) {
