@@ -106,13 +106,17 @@ class HighArray(size: Int) {
             }
         }
 
-        for (i in 0 until nElems) {
+        var i = 0
+
+        while (i < nElems) {
             if (a[i] == -1L) {
                 for (j in i until nElems - 1) {
                     a[j] = a[j + 1]
                 }
                 --nElems
+                --i
             }
+            ++i
         }
 
     }
