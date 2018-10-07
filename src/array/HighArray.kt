@@ -120,6 +120,12 @@ class HighArray(size: Int) {
         }
     }
 
+    fun insertionSort() {
+        for (i in 0 until nElems) {
+
+        }
+    }
+
     fun noDups() {
 
         for (i in 0 until nElems) {
