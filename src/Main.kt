@@ -17,7 +17,7 @@ fun main(vararg args: String) {
     arr.display()
     println()
 
-    arr.selectionSort()
+    arr.insertionSort()
     arr.display()
 
 }

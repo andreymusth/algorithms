@@ -121,8 +121,17 @@ class HighArray(size: Int) {
     }
 
     fun insertionSort() {
-        for (i in 0 until nElems) {
+        for (i in 1 until nElems) {
 
+            var k = i
+            val temp = a[i]
+
+            while (k > 0 && temp < a[k - 1]) {
+                a[k] = a[k - 1]
+                --k
+            }
+
+            a[k] = temp
         }
     }
 
