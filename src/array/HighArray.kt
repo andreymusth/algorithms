@@ -105,6 +105,19 @@ class HighArray(size: Int) {
         }
     }
 
+    fun median(): Long {
+
+        if (nElems == 1) {
+            return a[0]
+        }
+
+        return if (nElems % 2 == 0) {
+            (a[nElems / 2] + a[nElems / 2 - 1]) / 2
+        } else {
+            a[nElems / 2]
+        }
+    }
+
     fun selectionSort() {
 
         for (i in 0 until nElems) {

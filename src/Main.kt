@@ -1,6 +1,5 @@
 import linkedlist.LinkList
 
-
 fun main(vararg args: String) {
 
     val theList = LinkList()
