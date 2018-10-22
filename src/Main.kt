@@ -9,13 +9,9 @@ fun main(vararg args: String) {
     theList.insertFirst(88)
 
     theList.displayList()
-    println()
 
-    while (!theList.isEmpty()) {
-        val aLink = theList.deleteFirst()
-        print("Deleted ")
-        aLink?.displayLink()
-    }
-    theList.displayList()
+    val link = theList.find(3)
 
+    println("found")
+    link?.displayLink()
 }

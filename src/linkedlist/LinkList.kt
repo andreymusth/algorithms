@@ -28,6 +28,23 @@ class LinkList {
 
     }
 
+
+    fun find(key: Int): Link? {
+
+        var current = first
+
+        while (current?.iData != key) {
+            if (current == null) {
+                return null
+            } else {
+                current = current.next
+            }
+        }
+
+        return current
+    }
+
+
     fun deleteFirst(): Link? {
 
         return if (!isEmpty()) {
