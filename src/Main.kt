@@ -10,8 +10,9 @@ fun main(vararg args: String) {
 
     theList.displayList()
 
-    val link = theList.find(3)
+    val link = theList.delete(66)
 
-    println("found")
-    link?.displayLink()
+    println()
+
+    theList.displayList()
 }

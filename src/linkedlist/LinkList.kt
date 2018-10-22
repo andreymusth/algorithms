@@ -44,6 +44,27 @@ class LinkList {
         return current
     }
 
+    fun delete(key: Int): Link? {
+
+        var current = first
+        var previous = first
+
+        while (current?.iData != key) {
+            if (current == null) {
+                return null
+            } else {
+                previous = current
+                current = current.next
+            }
+        }
+
+        if (current == first) {
+            first = first?.next
+        } else {
+            previous?.next = current.next
+        }
+        return current
+    }
 
     fun deleteFirst(): Link? {
 
