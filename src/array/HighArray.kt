@@ -90,7 +90,11 @@ class HighArray(size: Int) {
     }
 
     fun bubbleSort() {
-        for (i in 0 until nElems) {
+
+        var out = 0
+        var inner = 0
+
+        for (out in 0 until nElems) {
             for (j in 0 until nElems - 1) {
                 if (a[j] > a[j + 1]) {
                     val k = a[j + 1]

@@ -1,23 +1,22 @@
-import array.HighArray
+import linkedlist.LinkList
 
 
 fun main(vararg args: String) {
 
-    val arr = HighArray(20)
-    arr.insert(44)
-    arr.insert(24)
-    arr.insert(11)
-    arr.insert(78)
-    arr.insert(19)
-    arr.insert(55)
-    arr.insert(34)
-    arr.insert(66)
-    arr.insert(1)
+    val theList = LinkList()
+    theList.insertFirst(22)
+    theList.insertFirst(44)
+    theList.insertFirst(66)
+    theList.insertFirst(88)
 
-    arr.display()
+    theList.displayList()
     println()
 
-    arr.insertionSort()
-    arr.display()
+    while (!theList.isEmpty()) {
+        val aLink = theList.deleteFirst()
+        print("Deleted ")
+        aLink?.displayLink()
+    }
+    theList.displayList()
 
 }
