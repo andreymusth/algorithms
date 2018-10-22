@@ -1,16 +1,18 @@
-import queue.PriorityQ
+import linkedlist.LinkList
 
 fun main(vararg args: String) {
 
-    val thePQ = PriorityQ(5)
+    val theList = LinkList()
+    theList.insertFirst(22)
+    theList.insertFirst(44)
+    theList.insertFirst(66)
+    theList.insertFirst(88)
 
-    thePQ.insert(30)
-    thePQ.insert(50)
-    thePQ.insert(10)
-    thePQ.insert(40)
-    thePQ.insert(20)
-    while (!thePQ.isEmpty()) {
-        val n = thePQ.remove()
-        print("$n ")
-    }
+    theList.displayList()
+
+    val link = theList.delete(66)
+
+    println()
+
+    theList.displayList()
 }
