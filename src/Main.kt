@@ -1,24 +1,15 @@
-import queue.LinkQueue
+import linkedlist.SortedList
 
 fun main(vararg args: String) {
 
-    val theQueue = LinkQueue()
-    theQueue.insert(20)
-    theQueue.insert(40)
-    theQueue.displayQueue()
-
-    println()
-
-    theQueue.insert(60)
-    theQueue.insert(80)
-    theQueue.displayQueue()
-
-    println()
-
-    theQueue.remove()
-    theQueue.remove()
-
-    println()
-    
-    theQueue.displayQueue()
+    val theSortedList = SortedList()
+    theSortedList.insert(20)
+    theSortedList.insert(40)
+    theSortedList.displayList()
+    theSortedList.insert(10)
+    theSortedList.insert(30)
+    theSortedList.insert(50)
+    theSortedList.displayList()
+    theSortedList.remove()
+    theSortedList.displayList()
 }
