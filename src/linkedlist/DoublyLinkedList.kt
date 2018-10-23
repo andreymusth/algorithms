@@ -66,7 +66,7 @@ class DoublyLinkedList {
 
     }
 
-    fun delete(key: Int): Int? {
+    fun deleteKey(key: Int): Int? {
 
 
         var current = first
