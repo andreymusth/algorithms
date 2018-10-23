@@ -1,22 +1,24 @@
-import stack.LinkStack
+import queue.LinkQueue
 
 fun main(vararg args: String) {
 
-    val theStack = LinkStack()
-    theStack.push(20)
-    theStack.push(40)
-    theStack.displayStack()
-    println()
-    theStack.push(60)
-    theStack.push(80)
-
-    println()
-    theStack.displayStack()
-    theStack.pop()
-    theStack.pop()
-    theStack.pop()
+    val theQueue = LinkQueue()
+    theQueue.insert(20)
+    theQueue.insert(40)
+    theQueue.displayQueue()
 
     println()
 
-    theStack.displayStack()
+    theQueue.insert(60)
+    theQueue.insert(80)
+    theQueue.displayQueue()
+
+    println()
+
+    theQueue.remove()
+    theQueue.remove()
+
+    println()
+    
+    theQueue.displayQueue()
 }
