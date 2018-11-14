@@ -1,8 +1,8 @@
 package recursion
 
-class TriangleSumCounter(private val numberOfColumns: Int) {
+class TriangleSum(private val numberOfColumns: Int) {
 
-    fun count(): Int {
+    fun calculate(): Int {
         return triangleSum(numberOfColumns)
     }
 

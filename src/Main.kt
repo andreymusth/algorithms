@@ -1,8 +1,8 @@
-import queue.SortedListPriorityQ
-import recursion.TriangleSumCounter
+import recursion.Factorial
+import recursion.TriangleSum
 
 
 fun main(vararg args: String) {
 
-    println(TriangleSumCounter(7).count())
+    println(Factorial(10).calculate())
 }
