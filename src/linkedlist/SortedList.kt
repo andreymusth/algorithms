@@ -4,6 +4,10 @@ class SortedList {
 
     private var first: Link? = null
 
+    fun isEmpty(): Boolean {
+        return first == null
+    }
+
     fun insert(key: Int) {
 
         val newLink = Link(key)
@@ -33,6 +37,10 @@ class SortedList {
         first = first?.next
 
         return temp?.iData
+    }
+
+    fun peek(): Int? {
+        return first?.iData
     }
 
     fun displayList() {
