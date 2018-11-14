@@ -1,16 +1,8 @@
 import queue.SortedListPriorityQ
+import recursion.TriangleSumCounter
 
 
 fun main(vararg args: String) {
 
-
-    val queue = SortedListPriorityQ()
-    queue.insert(20)
-    queue.insert(10)
-    queue.insert(5)
-
-
-    println(queue.remove().toString())
-    println(queue.remove().toString())
-    println(queue.remove().toString())
+    println(TriangleSumCounter(7).count())
 }
