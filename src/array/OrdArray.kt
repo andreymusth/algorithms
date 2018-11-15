@@ -65,6 +65,31 @@ class OrdArray(size: Int) {
         }
     }
 
+    fun findRecurcive(key: Long): Int {
+        return recFind(key, 0, nElems - 1)
+    }
+
+    private fun recFind(key: Long, lowerBound: Int, upperBound: Int): Int {
+
+        val currentIndex = (lowerBound + upperBound) / 2
+
+        if (a[currentIndex] == key) {
+            return currentIndex
+
+        }
+
+        if (lowerBound > upperBound) {
+            return -1
+        }
+
+        return if (a[currentIndex] > key) {
+            recFind(key, lowerBound, currentIndex - 1)
+        } else {
+            recFind(key, currentIndex + 1, upperBound)
+        }
+
+    }
+
     fun get(i: Int) = a[i]
 
     fun display() {
