@@ -1,22 +1,32 @@
-import array.OrdArray
-import recursion.Factorial
-import recursion.TriangleSum
-
+import recursion.MergeSortedArray
 
 fun main(vararg args: String) {
 
 
-    val array = OrdArray(10)
-    array.insert(5)
-    array.insert(3)
-    array.insert(20)
-    array.insert(13)
+    val arr = MergeSortedArray(12)
 
-    array.display()
+    arr.insert(64)
+    arr.insert(21)
+    arr.insert(33)
+    arr.insert(70)
+    arr.insert(12)
+    arr.insert(85)
+    arr.insert(44)
+    arr.insert(3)
+    arr.insert(99)
+    arr.insert(0)
+    arr.insert(108)
+    arr.insert(36)
 
-    val indexOf13 = array.findRecurcive(13)
+    arr.display()
 
-    println(indexOf13)
+    println()
+    println()
 
+    arr.mergeSort()
+
+    println()
+    println()
+    arr.display()
 
 }
