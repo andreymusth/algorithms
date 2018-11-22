@@ -6,7 +6,7 @@ class TriangleSum(private val numberOfColumns: Int) {
         return triangleSum(numberOfColumns)
     }
 
-    fun triangleSum(n: Int): Int {
+    private fun triangleSum(n: Int): Int {
         return if (n == 1) {
             1
         } else {
