@@ -20,7 +20,7 @@ fun main(vararg args: String) {
 //    arr.shellSort()
 //    arr.display()
 
-    println(Fibonacci(7).calculateRec())
+    println(Fibonacci(7).calculate())
 
 
 }

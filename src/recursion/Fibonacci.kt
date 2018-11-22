@@ -7,10 +7,19 @@ class Fibonacci(private val number: Int) {
     }
 
     fun calculate(): Int {
-        var f1 = 0
-        var f2 = 1
 
-        for ()
+        var prev = 0
+        var next = 1
+
+        var sum = 0
+
+        for (i in 1 until number) {
+            sum = prev + next
+            prev = next
+            next = sum
+        }
+
+        return sum
     }
 
     private fun fib(num: Int): Int {
