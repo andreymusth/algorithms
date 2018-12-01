@@ -1,13 +1,14 @@
-import kotlin.math.min
+import tree.Tree
+
 
 fun main(vararg args: String) {
 
+    val tree = Tree()
+    tree.insert(11)
+    tree.insert(3)
+    tree.insert(10)
+    tree.insert(5)
 
-    // 1 3 4 1 3
-    // 2 45 3 1 4
-    // 3 5 53 3 1
-
-
-
+    tree.displayInOrder()
 
 }
