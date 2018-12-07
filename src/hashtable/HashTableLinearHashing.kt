@@ -1,6 +1,6 @@
 package hashtable
 
-class HashTable(private val arraySize: Int) {
+class HashTableLinearHashing(private val arraySize: Int) {
 
 
     private val hashArray = arrayOfNulls<DataItem>(arraySize)
